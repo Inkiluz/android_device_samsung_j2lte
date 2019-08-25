@@ -30,9 +30,9 @@ TARGET_SCREEN_HEIGHT := 960
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-		libbt-vendor
-
+    android.hardware.bluetooth@1.0-impl-j2lte \
+    android.hardware.bluetooth@1.0-service \
+    libbt-vendor
 # Flat device tree for boot image
 PRODUCT_PACKAGES += \
     dtbhtoolExynos
