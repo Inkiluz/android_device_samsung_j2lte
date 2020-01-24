@@ -111,8 +111,6 @@ BOARD_HARDWARE_CLASS += hardware/samsung/lineagehw
 
 # Graphics
 USE_OPENGL_RENDERER := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
 # HDMI
 BOARD_HDMI_INCAPABLE := true
 # FIMG2D
