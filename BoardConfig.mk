@@ -150,9 +150,6 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
 
 BOARD_USES_HWC_SERVICES := true
-
-# HWComposer
-TARGET_HWC2_NO_SKIPVALIDATE := true
 # Charger
 WITH_LINEAGE_CHARGER := false
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
