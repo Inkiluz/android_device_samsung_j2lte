@@ -88,6 +88,9 @@ lib/librilutils.so
 lib/libsec-ril-dsds.so
 lib/libsecnativefeature.so
 
+# Protobuf
+lib/libprotobuf-cpp-fl26.so
+
 # Sensors
 lib/hw/sensors.universal3475.so
 
