@@ -135,6 +135,9 @@ MALLOC_SVELTE := true
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 
+# Network Routing
+TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
+
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_WLAN_DEVICE                := bcmdhd
