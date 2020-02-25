@@ -83,8 +83,4 @@ void vendor_load_properties()
 		property_override("ro.product.model", "J200BT");
 	}	
 	set_sim_info();
-
-     // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
-
 }
