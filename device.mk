@@ -114,9 +114,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
 		libprotobuf-cpp-full
 
-PRODUCT_PACKAGES += \
-    SamsungServiceMode
-
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
