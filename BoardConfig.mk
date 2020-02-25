@@ -58,6 +58,9 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
 TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
+# HWComposer
+BOARD_USES_VPP := true
+BOARD_HDMI_INCAPABLE := true
 
 # HIDL Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
@@ -117,7 +120,7 @@ BOARD_USES_SKIA_FIMGAPI := true
 # (G)SCALER
 BOARD_USES_SCALER := true
 # Samsung OpenMAX Video
-BOARD_USE_STOREMETADATA := true
+BOARD_USE_STOREMETADATA := false
 BOARD_USE_METADATABUFFERTYPE := true
 BOARD_USE_DMA_BUF := true
 BOARD_USE_ANB_OUTBUF_SHARE := true
