@@ -234,6 +234,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.secure=0 \
 	ro.adb.secure=0
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2015-01-01
+
+
 # call Samsung LSI board support package
 $(call inherit-product, hardware/samsung_slsi-cm/exynos3475/exynos3475.mk)
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
