@@ -135,6 +135,11 @@ MALLOC_SVELTE := true
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 
+
+ # Legacy BLOB Support
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/vendor/bin/hw/rild=27	
+
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
