@@ -22,6 +22,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_j2lte
 PRODUCT_DEVICE := j2lte
 PRODUCT_BRAND := samsung 
-PRODUCT_MODEL := 
+PRODUCT_MODEL := J200G
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
