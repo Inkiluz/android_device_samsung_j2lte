@@ -84,8 +84,8 @@ PRODUCT_PACKAGES += \
 		android.hardware.graphics.composer@2.1-impl \
 		android.hardware.graphics.mapper@2.0-impl \
 		android.hardware.memtrack@1.0-impl \
-    libion \
-    libfimg
+        libion \
+        libfimg
 
 
 # Health
@@ -103,8 +103,8 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-		android.hardware.radio@1.0 \
-		android.hardware.radio.deprecated@1.0 \
+	android.hardware.radio@1.0 \
+	android.hardware.radio.deprecated@1.0 \
     libsecril-client \
     libsecril-client-sap \
     rild \
@@ -112,7 +112,7 @@ PRODUCT_PACKAGES += \
     libril \
     modemloader \
     libxml2 \
-		libprotobuf-cpp-full
+	libprotobuf-cpp-full
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -126,7 +126,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-		android.hardware.wifi@1.0 \
+	android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-impl \
     android.hardware.wifi@1.0-service \
     libnetcmdiface \
@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
     wlutil \
     wificond \
     wpa_supplicant \
-		wpa_supplicant.conf
+	wpa_supplicant.conf
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -186,12 +186,12 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-		android.hardware.power@1.0-impl \
+	android.hardware.power@1.0-impl \
     power.universal3475
 
 # Lights
 PRODUCT_PACKAGES += \
-		android.hardware.light@2.0-impl \
+	android.hardware.light@2.0-impl \
     lights.universal3475
 
 # USB
@@ -201,10 +201,6 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
 		android.hardware.vibrator@1.0-impl
-
-# Root
-PRODUCT_PACKAGES += \
-    su
 
 # Offmode charger
 PRODUCT_PACKAGES += \
@@ -223,18 +219,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_sensor
 
-# ADB
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	persist.service.adb.enable=1 \
-	persist.service.debuggable=1 \
-	persist.sys.usb.config=mtp,adb \
-	ro.secure=0 \
-	ro.adb.secure=0
-
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.build.vendor_security_patch=2015-01-01
-
 
 # call Samsung LSI board support package
 $(call inherit-product, hardware/samsung_slsi-cm/exynos3475/exynos3475.mk)
