@@ -15,13 +15,9 @@
 #
 
 LOCAL_PATH := device/samsung/j2lte
-BUILD_TOP := $(shell pwd)
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
-
-# Firmware
-TARGET_NO_BOOTLOADER := true
 
 BLOCK_BASED_OTA:= false
 
@@ -53,7 +49,6 @@ TARGET_KERNEL_HEADER_ARCH := arm
 
 # Kernel config
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
-KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
 TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -64,19 +59,6 @@ BOARD_HDMI_INCAPABLE := true
 
 # HIDL Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
-
-# Partitions
-
-#Filesystem            1K-blocks    Used Available Use% Mounted on
-#rootfs                   851220    3176    848044   1% /
-#tmpfs                    934160     528    933632   1% /dev
-#tmpfs                    934160       0    934160   0% /mnt
-#/dev/block/mmcblk0p20   2975760  671072   2304688  23% /system
-#/dev/block/mmcblk0p21    197472     184    197288   1% /cache
-#/dev/block/mmcblk0p24  11467980 2948308   8519672  26% /data
-#/dev/block/mmcblk0p3      16048    2444     13604  16% /efs
-#/dev/block/mmcblk0p4       3952     548      3404  14% /cpefs
-#/dev/block/mmcblk0p18      8080     288      7792   4% /persdata/
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
@@ -138,7 +120,6 @@ MALLOC_SVELTE := true
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 
-
  # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/hw/rild=27	
@@ -171,16 +152,12 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := tss310
 BOARD_PROVIDES_LIBRIL := true
-SIM_COUNT := 2
-
-# Release tools
-TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
 # Recovery
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal3475
-TARGET_OTA_ASSERT_DEVICE := j2lte, j2ltedd, j2ltedx
+TARGET_OTA_ASSERT_DEVICE := j2lte, j2ltedd
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
@@ -194,7 +171,6 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_NTFS_3G := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT_FUSE := true
-TW_EXCLUDE_SUPERSU := true
 endif
 
 # Init
